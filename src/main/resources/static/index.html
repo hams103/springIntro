@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Intro</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<!--    Linket Jquery   -->
+
+    <script type="text/javascript">
+        function hallo() {
+            const url = "/?navn=" + $("#navn").val();
+
+            $.get(url, function(navn) {
+                $("#hallo").html(navn);
+            });
+        }
+    </script>
+
+<body>
+
+
+Skriv inn ditt navn: <input type="text" id="navn" />
+
+<button onclick="hallo();"> Trykk meg </button>
+
+<div id="hallo"> </div>
+
+
+</body>
+</html>
